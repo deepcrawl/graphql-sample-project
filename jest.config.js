@@ -11,7 +11,7 @@ module.exports = {
   preset: "ts-jest",
   roots: ["<rootDir>/src"],
   setupFiles: ["reflect-metadata"],
-  setupFilesAfterEnv: ["jest-extended"],
+  setupFilesAfterEnv: ["jest-extended/all"],
   testEnvironment: "node",
   testMatch: ["<rootDir>/src/**/*.integration.ts", "<rootDir>/src/**/*.test.ts"],
 };

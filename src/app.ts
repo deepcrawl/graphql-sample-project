@@ -3,6 +3,7 @@ import "reflect-metadata";
 import { resolve } from "path";
 
 import { ApolloServer, ServerInfo } from "apollo-server";
+import { ApolloServerPluginLandingPageGraphQLPlayground } from "apollo-server-core";
 import { GraphQLSchema } from "graphql";
 import { buildSchema } from "type-graphql";
 
@@ -16,7 +17,7 @@ export class App {
   public async start(): Promise<{ server: ApolloServer; serverInfo: ServerInfo }> {
     const schema = await this.buildSchema();
 
-    const server = new ApolloServer({ schema });
+    const server = new ApolloServer({ schema, plugins: [ApolloServerPluginLandingPageGraphQLPlayground()] });
 
     const serverInfo = await server.listen(this.port);
     return { server, serverInfo };
