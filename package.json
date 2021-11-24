@@ -19,10 +19,11 @@
     "graphql": "^15.7.2",
     "pino": "^7.4.0",
     "reflect-metadata": "^0.1.13",
-    "type-graphql": "^1.1.1"
+    "type-graphql": "^1.2.0-rc.1"
   },
   "devDependencies": {
     "@types/jest": "^27.0.3",
+    "@types/node": "^16.11.10",
     "@types/pino": "7.0.5",
     "@types/validator": "^13.7.0",
     "@typescript-eslint/eslint-plugin": "5.4.0",
